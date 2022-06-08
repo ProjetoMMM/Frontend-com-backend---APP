@@ -1,13 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 ion-content{
     --ion-background-color:#fff;
     font-family: Arial, Helvetica, sans-serif;
 
 }
+ion-header{
+    box-shadow: rgb(3, 3, 3);
+    position:rfixed;
+
+  .img{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-left: 35%;
+    width: 95px;
+  }
+}
 
 .background-pic{
     height: 100vh;
     width: 100%;
-    
+    background: url('../../img2/bg.png');
     background-position: 30%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,31 +42,39 @@ ion-content{
     top:0;
 
     img{
+        margin-top: 10px;
+         max-width:120px;
+         max-height:120px;
+         width: auto;
+         height: auto;
         opacity: 0.9;
     }
 }
 
 ion-card{
-    margin-top: 130px;
+    margin-top: 100px;
     background: transparent;
     box-shadow: none;
     text-align: center;
 
     ion-card-title{
         color:#242020;
-        font-size: 30px;
+        font-family: 'Caveat';
+        font-size: 40px;
     }
 
     ion-card-subtitle{
-        color:#BBBBBB;
+        color:#1d1717;
         font-size: 14px;
         font-weight: 400; 
+        font-family: 'Poppins';
 
         a{
             text-decoration: none;
             font-weight: bold;
             color: #198645;
             font-size: 15;
+            font-family: 'Poppins';
         }
     }
 
