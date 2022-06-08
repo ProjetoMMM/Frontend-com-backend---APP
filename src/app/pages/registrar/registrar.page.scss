@@ -1,4 +1,5 @@
-ion-content{
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');ion-content{
     --ion-background-color:#fff;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -7,7 +8,7 @@ ion-content{
 .background-pic{
     height: 100vh;
     width: 100%;
-    
+    background: url('../../img2/bg.png');
     background-position: 30%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,32 +26,34 @@ ion-content{
 .shape{
     position: fixed;
     top:0;
-    right: 0;
 
     img{
+        margin-top: 10px;
+         max-width:120px;
+         max-height:120px;
+         width: auto;
+         height: auto;
         opacity: 0.9;
     }
 }
 
 ion-card{
-    margin-top: 30px;
+    margin-top: 70px;
     background: transparent;
     box-shadow: none;
     text-align: center;
 
     ion-card-title{
         color:#242020;
-        font-size: 25px;
-        font-weight: 400;
-        top:0;
+        font-size: 40px;
+        font-family: 'Caveat';
     }
 
     ion-card-subtitle{
-        color:#BBBBBB;
-        font-size: 14px;
-        font-weight: 400;
-        max-width: 200px;
+        margin-top: 10px;
+        color:#8b8b8b;
         display: inline-block;
+        font-family: 'Poppins';
 
 
         strong{
@@ -62,14 +65,14 @@ ion-card{
     }
 
     ion-card-content{
-        margin-top: 30px;
+      
 
         ion-item{
             --ion-item-background:transparent;
             --border-width:0;
             --inner-border-width:0;
             --highlight-color-focused:none;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
 
             ion-input{
                 width:257px;
