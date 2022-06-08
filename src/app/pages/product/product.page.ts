@@ -13,6 +13,7 @@ export class ProductPage implements OnInit {
   pname: string
   pqty: string
   reqst: any
+  data: any
 
   constructor(private route: Router, private http: HttpClient, private alertController: AlertController) {}
 
@@ -26,7 +27,8 @@ export class ProductPage implements OnInit {
       pname: this.pname,
       pqty: this.pqty,
       reqst: false,
-      UserId: userId.userId
+      UserId: userId.userId,
+      data: this.data
     }
 
     const user = localStorage.getItem('User')
@@ -38,6 +40,7 @@ export class ProductPage implements OnInit {
 
     this.http.post('http://localhost:5000/products/criar', product).subscribe(res => {
       localStorage.setItem('User', JSON.stringify(res))
+      console.log(product)
       this.route.navigateByUrl('/home', {replaceUrl: true})
       
     }), error => {

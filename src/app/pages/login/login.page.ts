@@ -48,6 +48,10 @@ export class LoginPage implements OnInit {
 
     const { role } = await alert.onDidDismiss();
   }
+
+  navigateToRedefinir(){
+    this.route.navigate(['esquecisenha'])
+  }
   
 
 }

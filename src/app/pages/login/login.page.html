@@ -24,7 +24,7 @@
             <ion-item>
               <ion-input [(ngModel)]="password" placeholder="Senha" type="password"></ion-input>
             </ion-item>
-            <a href="http://localhost:8100/esquecisenha">Esqueci minha senha</a>
+            <ion-button (click)="navigateToRedefinir()">Esqueci minha senha</ion-button>
 
             <div class="bottom-section">
               <ion-button (click)="login()">Entrar</ion-button>

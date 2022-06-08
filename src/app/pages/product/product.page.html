@@ -21,9 +21,9 @@
          
          <ion-card-content>
           <p style="margin-top: -19px; color: green;">Selecione abaixo o produto disponível</p>
-          <ion-item class="lista">
+          <ion-item class="lista" style="color: black">
             <ion-label>Tipo</ion-label>
-            <ion-select placeholder="selecione">
+            <ion-select [(ngModel)]="pname" placeholder="selecione">
               <ion-select-option value="abobrinha">Abobrinha</ion-select-option>
               <ion-select-option value="alface">Alface</ion-select-option>
               <ion-select-option value="banana prata">Banana prata</ion-select-option>
@@ -43,7 +43,7 @@
             </ion-item>
             <p style="margin-top: 10px; color: green;">Insira abaixo a possível data de <br> entrega do produto</p>
             <ion-item>
-              <ion-input placeholder="dd/mm/aaaa" type="text"></ion-input>
+              <ion-input [(ngModel)]="data" placeholder="dd/mm/aaaa" type="text"></ion-input>
             </ion-item>
             <div class="bottom-section">
               <ion-button (click)="create()">Enviar</ion-button>
@@ -51,14 +51,14 @@
          </ion-card-content>
        </ion-card>   
 
-       <ion-card (click)="navigateToHomePage()" style="height: 50px; width:250px; border-radius:20px; margin-left: 18%; background-color: #678a409a; margin-top: -1px;">
+       <ion-card (click)="navigateToHomePage()" style="height: 50px; width:250px; border-radius:20px; margin-left: 18%; background-color: #678a409a; margin-top: -1px; margin-left: 25px;">
          <img style="width: 33px; margin-top: 10px; margin-left: -170px;"  src="../../../assets/icon-3.png" alt="">
          <h3 style="color: #fff; font-size: 13px; margin-left: 30px; margin-top:-26px ">Voltar para a página inicial</h3>
        </ion-card>
 
-       <ion-card (click)="navigateToUserPage()" style="height: 50px; width:250px; border-radius:20px; margin-left: 18%; background-color: #678a409a; margin-top: -8px;">
-        <img style="width: 33px; margin-top: 10px; margin-left: -170px;"  src="../../../assets/icon-5.png" alt="">
-        <h3 style="color: #fff; font-size: 13px; margin-left: 30px; margin-top:-26px ">Voltar para a página inicial</h3>
+       <ion-card (click)="navigateToUserPage()" style="height: 50px; width:250px; border-radius:20px; margin-left: 18%; background-color: #678a409a; margin-top: -8px; margin-left: 25px;">
+        <img style="width: 33px; margin-top: 10px; margin-left: -210px;"  src="../../../assets/icon-5.png" alt="">
+        <h3 style="color: #fff; font-size: 13px; margin-left: 30px; margin-top:-26px ">Voltar para a página de requisições</h3>
       </ion-card>
        }
        
