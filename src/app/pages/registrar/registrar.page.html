@@ -1,0 +1,48 @@
+<ion-content>
+  <div class="background-pic">
+    <div class="background-filter">
+      <div class="shape"><img src="../../assets/shape.svg" /></div>
+  
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+    Registre-se!
+          </ion-card-title>
+          <ion-card-subtitle>
+          Crie sua <strong>conta</strong> preenchendo o formulário
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item>
+            <ion-input [(ngModel)]="name" placeholder="Nome Completo" type="text"></ion-input>
+          </ion-item>
+         <!--<ion-item>
+            <ion-input placeholder="Cidade"></ion-input>
+          </ion-item>--> 
+          <ion-item>
+            <ion-input [(ngModel)]="state" placeholder="Estado" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="cell" placeholder="Número de telefone" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="password" placeholder="Senha" type="password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="confirmpassword" placeholder="Confirme a senha" type="password"></ion-input>
+          </ion-item>
+          
+  
+          <div class="bottom-section">
+            <ion-button (click)="register()">Registrar</ion-button>
+            <span> Já tem uma conta? <a href="http://localhost:8100/login"> Entre</a></span>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  
+  </ion-content>

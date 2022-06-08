@@ -1,0 +1,25 @@
+
+
+ion-content{
+  --background: #ffff url('../img2/bg.png') no-repeat center center / cover !important;
+  font-family: 'Times New Roman', Times, serif;
+  
+  ion-header{
+    box-shadow: rgb(3, 3, 3);
+
+  .img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 35%;
+    width: 95px;
+  }
+}
+
+ion-tabs{
+  position: sticky;
+}
+
+}
+
+

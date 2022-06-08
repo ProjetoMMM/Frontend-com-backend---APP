@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="products">
+    <ion-item *ngFor="let product of products.products">
+      <ion-label>
+        <li>
+          <span>Produto: {{product.pname}}</span>
+          <span>Quantidade: {{product.pqty}}</span>
+        </li>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-tabs>
+  <ion-tab-bar slot="Perfil">
+    <ion-tab-button tab="perfil">
+      <img style="width: 36px" src="../../assets/icon-5.png" alt="">
+      <ion-label>Perfil</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="Produtos" (click)="navigateToProductPage()">
+      <img style="width: 36px" src="../../assets/icon-4.png" alt="">
+      <ion-label>Produtos</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="home" (click)="navigateToHomePage()">
+      <img style="width: 36px" src="../../assets/icon-3.png" alt="">
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
