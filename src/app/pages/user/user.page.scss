@@ -4,3 +4,48 @@
 ion-content{
     --background: #ffff url('../../img2/bg.png') no-repeat center center / cover !important;
 }
+
+
+ion-list{
+    color:black;
+   
+    background-color: rgba(255, 255, 255, 0.781);
+    box-shadow:#555B5B;
+    background: transparent ;
+    text-align: center;
+    border-radius: 15px;
+}
+ion-card{
+    color:black;
+    background: transparent ;
+    background-color: rgba(255, 255, 255, 0.781);
+    box-shadow:#555B5B;
+    text-align: center;
+    border-radius: 15px;
+}
+ion-card-content{
+    margin-top: 30px;
+
+    ion-item{
+        --ion-item-background:transparent;
+        color:black;
+        --border-width:0;
+        --inner-border-width:0;
+        --highlight-color-focused:none;
+        margin-bottom: 15px;
+
+        ion-input{
+            width:257px;
+            height: 42px;
+            border-radius: 15px;
+            border:  1px solid #198645;
+            font-size: 14px;
+            font-weight: 300;
+            color:#555B5B;
+            --padding-start:30px;
+        }
+
+    }
+
+ 
+}
