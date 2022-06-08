@@ -15,14 +15,15 @@ export class UserPage implements OnInit {
     // verificação de login
     const user = localStorage.getItem('User')
     if(user == null){
-      this.route.navigateByUrl('/login', {replaceUrl: true});
+      this.route.navigateByUrl('/user', {replaceUrl: true});
     }else{
       this.http.get('http://localhost:5000/products/').subscribe(res => {
         this.products = res
       }), error => {
         console.log(error)
         }
-      }}
+      }
+    }
 
   navigateToHomePage(){
  this.route.navigate(['home']);

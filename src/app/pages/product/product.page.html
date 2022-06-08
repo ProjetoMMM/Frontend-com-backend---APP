@@ -1,38 +1,50 @@
-<ion-header>
-
-</ion-header>
-
 <ion-content>
+  <ion-header style="background-color: #927f5d;">
+    <img style=" margin-top: 10px; margin-bottom: 10px;text-align: center;margin-left: 35%;width: 95px;" class="img" src="../../assets/logo.png" alt="logo Muda Meu Mundo">
+  </ion-header>
 
-  <div class="background-pic">
-     <div class="background-filter">
-       <div class="shape"><img src="../../assets/shape.png" /></div>
-
-       <ion-card>
+  <div style=" height: 25px;background-color: rgb(50, 102, 50)">
+  <ion-subtitle style="font-family: 'Times New Roman', Times, serif;margin-left:10px; font-size: 10px; text-align:center; color: rgb(207, 250, 206); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    A plataforma que ajuda o produtor, a se conectar com o varejo.
+  </ion-subtitle>
+  </div>
+ 
+       <ion-card >
          <ion-card-header>
-           <ion-card-title>
-            Bem vindo
+           <ion-card-title style="color:rgb(18, 102, 18);font-size: 25px">
+            Registro de produtos
            </ion-card-title>
-           <ion-card-subtitle>
-            Trabalhe conosco, <a href="http://localhost:8100/registrar" >Registre-se</a>
-           </ion-card-subtitle>
+           <ion-subtitle style="margin-top: 25px; font-size:13px ">
+            Registre aqui caso você tenha algum produto disponível e nós serviremos como uma ponte, levando sua mensagem para o agrônomo ;)
+           </ion-subtitle>
          </ion-card-header>
+         
          <ion-card-content>
+          <p style="margin-top: -19px; color: green;">Insira abaixo o produto disponível</p>
             <ion-item>
              <ion-input [(ngModel)]="pname" placeholder="Produto" type="text"></ion-input>
             </ion-item>
+            <p style="margin-top: 10px; color: green;">Insira abaixo a quantidade disponível</p>
             <ion-item>
               <ion-input [(ngModel)]="pqty" placeholder="Quantidade" type="text"></ion-input>
             </ion-item>
-            <a href="http://localhost:8100/esquecisenha">Esqueci minha senha</a>
-
             <div class="bottom-section">
               <ion-button (click)="create()">Entrar</ion-button>
-              <span> Nao tem uma conta? <a href="http://localhost:8100/registrar"> Registre-se</a></span>
             </div>
          </ion-card-content>
+       </ion-card>   
+
+       <ion-card (click)="navigateToHomePage()" style="height: 50px; width:250px; border-radius:20px; margin-left: 18%; background-color: #678a409a; margin-top: -1px;">
+         <img style="width: 33px; margin-top: 10px; margin-left: -170px;"  src="../../../assets/icon-3.png" alt="">
+         <h3 style="color: #fff; font-size: 13px; margin-left: 30px; margin-top:-26px ">Voltar para a página inicial</h3>
        </ion-card>
-     </div>
-  </div>
+
+       <ion-card (click)="navigateToUserPage()" style="height: 50px; width:250px; border-radius:20px; margin-left: 18%; background-color: #678a409a; margin-top: -8px;">
+        <img style="width: 33px; margin-top: 10px; margin-left: -170px;"  src="../../../assets/icon-5.png" alt="">
+        <h3 style="color: #fff; font-size: 13px; margin-left: 30px; margin-top:-26px ">Voltar para a página inicial</h3>
+      </ion-card>
+       }
+       
+
 
 </ion-content>
