@@ -5,7 +5,7 @@
 
   <div style=" height: 25px;background-color: rgb(50, 102, 50)">
   <ion-subtitle style="font-family: 'Times New Roman', Times, serif;margin-left:10px; font-size: 10px; text-align:center; color: rgb(207, 250, 206); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-    A plataforma que ajuda o produtor, a se conectar com o varejo.
+    A plataforma que ajuda o produtor a se conectar com o varejo.
   </ion-subtitle>
   </div>
  
@@ -20,16 +20,33 @@
          </ion-card-header>
          
          <ion-card-content>
-          <p style="margin-top: -19px; color: green;">Insira abaixo o produto disponível</p>
+          <p style="margin-top: -19px; color: green;">Selecione abaixo o produto disponível</p>
+          <ion-item class="lista">
+            <ion-label>Tipo</ion-label>
+            <ion-select placeholder="selecione">
+              <ion-select-option value="abobrinha">Abobrinha</ion-select-option>
+              <ion-select-option value="alface">Alface</ion-select-option>
+              <ion-select-option value="banana prata">Banana prata</ion-select-option>
+              <ion-select-option value="batata doce">Batata doce</ion-select-option>
+              <ion-select-option value="batata inglesa">Batata inglesa</ion-select-option>
+              <ion-select-option value="cebola">Cebola</ion-select-option>
+              <ion-select-option value="cenoura">Cenoura</ion-select-option>
+              <ion-select-option value="couve">Couve</ion-select-option>
+              <ion-select-option value="limão">Limão</ion-select-option>
+              <ion-select-option value="maçã">Maçã</ion-select-option>
+              <ion-select-option value="tomate">Tomate</ion-select-option>
+            </ion-select>
+          </ion-item>   
+            <p style="margin-top: 10px; color: green;">Insira abaixo a quantidade disponível com a <br> unidade de medida</p>
             <ion-item>
-             <ion-input [(ngModel)]="pname" placeholder="Produto" type="text"></ion-input>
+              <ion-input [(ngModel)]="pqty" placeholder="Ex: 30 kilogramas" type="text"></ion-input>
             </ion-item>
-            <p style="margin-top: 10px; color: green;">Insira abaixo a quantidade disponível</p>
+            <p style="margin-top: 10px; color: green;">Insira abaixo a possível data de <br> entrega do produto</p>
             <ion-item>
-              <ion-input [(ngModel)]="pqty" placeholder="Quantidade" type="text"></ion-input>
+              <ion-input placeholder="dd/mm/aaaa" type="text"></ion-input>
             </ion-item>
             <div class="bottom-section">
-              <ion-button (click)="create()">Entrar</ion-button>
+              <ion-button (click)="create()">Enviar</ion-button>
             </div>
          </ion-card-content>
        </ion-card>   
