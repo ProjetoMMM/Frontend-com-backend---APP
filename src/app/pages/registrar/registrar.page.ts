@@ -33,6 +33,8 @@ export class RegistrarPage implements OnInit {
       confirmpassword: this.confirmpassword,
     }
 
+    
+
     this.http.post('http://localhost:5000/users/registro', user).subscribe(res => {
       localStorage.setItem('User', JSON.stringify(res))
       this.router.navigateByUrl('/home', {replaceUrl: true})

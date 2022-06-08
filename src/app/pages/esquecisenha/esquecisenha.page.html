@@ -15,11 +15,17 @@
         </ion-card-header>
         <ion-card-content>
           <ion-item>
-            <ion-input placeholder="Email"></ion-input>
+            <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="password" placeholder="Senha" type="password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="confirmpassword" placeholder="Confirmação de senha" type="password"></ion-input>
           </ion-item>
   
           <div class="bottom-section">
-            <ion-button>Restaurar senha</ion-button>
+            <ion-button (click)="redefinir()">Restaurar senha</ion-button>
           </div>
         </ion-card-content>
       </ion-card>

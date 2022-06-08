@@ -20,30 +20,41 @@ export class ProductPage implements OnInit {
   }
 
   create(){
+    const userId = JSON.parse(localStorage.getItem('User'))
+    console.log(userId)
     let product = {
       pname: this.pname,
       pqty: this.pqty,
-      reqst: false
+      reqst: false,
+      UserId: userId.userId
     }
+
+    const user = localStorage.getItem('User')
+    if(userId.userId == null){
+      this.route.navigateByUrl('/login', {replaceUrl: true});
+
+      return
+    }else{
 
     this.http.post('http://localhost:5000/products/criar', product).subscribe(res => {
       localStorage.setItem('User', JSON.stringify(res))
       this.route.navigateByUrl('/home', {replaceUrl: true})
+      
     }), error => {
-      this.presentAlert('Login Failed', error.error.message)
+      this.presentAlert('Ocorreu um erro', error.error.message)
     }
   }
-
+  }
   navigateToHomePage(){
- this.route.navigate(['home']);
+ this.route.navigateByUrl('/home')
   }
 
  navigateToProductPage(){
-  this.route.navigate(['product'])
+  this.route.navigateByUrl('/product')
   }
 
   navigateToUserPage(){
-    this.route.navigate(['user'])
+    this.route.navigateByUrl('/user')
     }
 
     async presentAlert(header: string, message: string) {
